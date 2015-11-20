@@ -1,0 +1,26 @@
+{
+  "name": "rehack",
+  "description": "rename project.",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "rehack": "bin/rehack"
+  },
+  "author": "fujisawa-shin",
+  "license": "BSD",
+  "dependencies": {
+    "colors": "~0.6.1",
+    "lodash": "^3.10.1",
+    "optimist": "~0.5.2",
+    "walk": "^2.3.9"
+  },
+  "devDependencies": {
+    "chai": "~1.6.1",
+    "mocha": "~1.11.0",
+    "grunt": "~0.4.1",
+    "grunt-release": "~0.5.1"
+  }
+}
