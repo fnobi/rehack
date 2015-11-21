@@ -40,7 +40,7 @@ $ rehack old-project new-project
 [default]  ./src/sass/components/_wrapper.scss
 [default]  ./src/js/BrowserFeature.js
 [default]  ./src/js/CSSUtil.js
-[update]   ./src/js/newProject.j
+[update]   ./src/js/newProject.js
 [default]  ./src/js/newProjectTest.js
 [default]  ./src/jade/index.jade
 [update]   ./src/jade/test.jade
