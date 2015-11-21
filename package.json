@@ -12,6 +12,7 @@
   "author": "fujisawa-shin",
   "license": "BSD",
   "dependencies": {
+    "async": "^1.5.0",
     "colors": "~0.6.1",
     "lodash": "^3.10.1",
     "optimist": "~0.5.2",
