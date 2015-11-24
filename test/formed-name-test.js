@@ -62,4 +62,24 @@ describe('FormedName', function () {
         var name = new FormedName('hogeMoge');
         expect(name.toChainCase()).to.be.equal('hoge-moge');
     });
+
+    it('class name to camel case', function () {
+        var name = new FormedName('HogeMoge');
+        expect(name.toCamelCase()).to.be.equal('hogeMoge');
+    });
+
+    it('class name to class name', function () {
+        var name = new FormedName('HogeMoge');
+        expect(name.toClassName()).to.be.equal('HogeMoge');
+    });
+
+    it('class name to snake case', function () {
+        var name = new FormedName('HogeMoge');
+        expect(name.toSnakeCase()).to.be.equal('hoge_moge');
+    });
+
+    it('class name to chain case', function () {
+        var name = new FormedName('HogeMoge');
+        expect(name.toChainCase()).to.be.equal('hoge-moge');
+    });
 });
