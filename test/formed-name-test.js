@@ -43,6 +43,14 @@ describe('FormedName', function () {
         expect(name.toClassName()).to.be.equal('HogeMoge');
     });
 
+    it('parse large snake case', function () {
+        var name = new FormedName('HOGE_MOGE');
+        expect(name.toChainCase()).to.be.equal('hoge-moge');
+        expect(name.toSnakeCase()).to.be.equal('hoge_moge');
+        expect(name.toCamelCase()).to.be.equal('hogeMoge');
+        expect(name.toClassName()).to.be.equal('HogeMoge');
+    });
+
     it('parse single word', function () {
         var name = new FormedName('hoge');
         expect(name.toChainCase()).to.be.equal('hoge');
