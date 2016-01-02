@@ -14,6 +14,9 @@
   },
   "author": "fujisawa-shin",
   "license": "BSD",
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "dependencies": {
     "async": "^1.5.0",
     "colors": "~0.6.1",
