@@ -15,19 +15,19 @@
   "author": "fujisawa-shin",
   "license": "BSD",
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=5.0.0"
   },
   "dependencies": {
-    "async": "^1.5.0",
-    "colors": "~0.6.1",
-    "lodash": "^3.10.1",
-    "optimist": "~0.5.2",
-    "walk": "^2.3.9"
+    "async": "1.5.*",
+    "colors": "0.6.*",
+    "lodash": "3.10.*",
+    "optimist": "0.5.*",
+    "walk": "2.3.*"
   },
   "devDependencies": {
-    "chai": "~1.6.1",
-    "grunt": "~0.4.1",
-    "grunt-release": "^0.13.0",
-    "mocha": "~1.11.0"
+    "chai": "1.6.*",
+    "grunt": "0.4.*",
+    "grunt-release": "0.13.*",
+    "mocha": "1.11.*"
   }
 }
