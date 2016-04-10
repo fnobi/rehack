@@ -1,10 +1,10 @@
-var expect = require('chai').expect;
+const expect = require('chai').expect;
 
-var FormedName = require(__dirname + '/../lib/FormedName');
+const FormedName = require(__dirname + '/../lib/FormedName');
 
 describe('FormedName', () => {
     it('parse chain case', () => {
-        var name = new FormedName('hoge-moge');
+        const name = new FormedName('hoge-moge');
         expect(name.toChainCase()).to.be.equal('hoge-moge');
         expect(name.toSnakeCase()).to.be.equal('hoge_moge');
         expect(name.toCamelCase()).to.be.equal('hogeMoge');
@@ -12,7 +12,7 @@ describe('FormedName', () => {
     });
     
     it('parse snake case', () => {
-        var name = new FormedName('hoge_moge');
+        const name = new FormedName('hoge_moge');
         expect(name.toChainCase()).to.be.equal('hoge-moge');
         expect(name.toSnakeCase()).to.be.equal('hoge_moge');
         expect(name.toCamelCase()).to.be.equal('hogeMoge');
@@ -20,7 +20,7 @@ describe('FormedName', () => {
     });
     
     it('parse camel case', () => {
-        var name = new FormedName('hogeMoge');
+        const name = new FormedName('hogeMoge');
         expect(name.toChainCase()).to.be.equal('hoge-moge');
         expect(name.toSnakeCase()).to.be.equal('hoge_moge');
         expect(name.toCamelCase()).to.be.equal('hogeMoge');
@@ -28,7 +28,7 @@ describe('FormedName', () => {
     });
 
     it('parse class name', () => {
-        var name = new FormedName('HogeMoge');
+        const name = new FormedName('HogeMoge');
         expect(name.toChainCase()).to.be.equal('hoge-moge');
         expect(name.toSnakeCase()).to.be.equal('hoge_moge');
         expect(name.toCamelCase()).to.be.equal('hogeMoge');
@@ -36,7 +36,7 @@ describe('FormedName', () => {
     });
 
     it('parse large chain case', () => {
-        var name = new FormedName('HOGE-MOGE');
+        const name = new FormedName('HOGE-MOGE');
         expect(name.toChainCase()).to.be.equal('hoge-moge');
         expect(name.toSnakeCase()).to.be.equal('hoge_moge');
         expect(name.toCamelCase()).to.be.equal('hogeMoge');
@@ -44,7 +44,7 @@ describe('FormedName', () => {
     });
 
     it('parse large snake case', () => {
-        var name = new FormedName('HOGE_MOGE');
+        const name = new FormedName('HOGE_MOGE');
         expect(name.toChainCase()).to.be.equal('hoge-moge');
         expect(name.toSnakeCase()).to.be.equal('hoge_moge');
         expect(name.toCamelCase()).to.be.equal('hogeMoge');
@@ -52,7 +52,7 @@ describe('FormedName', () => {
     });
 
     it('parse single word', () => {
-        var name = new FormedName('hoge');
+        const name = new FormedName('hoge');
         expect(name.toChainCase()).to.be.equal('hoge');
         expect(name.toSnakeCase()).to.be.equal('hoge');
         expect(name.toCamelCase()).to.be.equal('hoge');
