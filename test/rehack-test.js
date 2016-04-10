@@ -42,8 +42,25 @@ describe('Rehack', () => {
         
         rehack.startWalking();
     });
-    
-    it('rename dirname', () => {
+
+    it('rename dirname', (done) => {
+        fs.mkdirSync(TMP_DIR + '/hoge-hoge');
+        fs.writeFileSync(TMP_DIR + '/hoge-hoge/sample.txt');
         
+        const rehack = new Rehack('hogeHoge', 'mogeMoge', {
+            cwd: TMP_DIR,
+            useGitCmd: false
+        });
+        
+        rehack.on('error', (e) => {
+            throw new Error(e);
+        });
+        
+        rehack.on('end', () => {
+            expect(fs.existsSync(TMP_DIR + '/moge-moge/sample.txt')).to.be.ok;
+            done();
+        });
+        
+        rehack.startWalking();        
     });
 });
